@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "946264290866",
+    "firebase_url": "https://fore-m-1-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fore-m-1",
+    "storage_bucket": "fore-m-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946264290866:android:9bcf3197e93bd1cea0ae2b",
+        "android_client_info": {
+          "package_name": "com.example.femv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946264290866-v22dddkarca49g61cf7v6b6ti9j6gre8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcuNJlwGySn51D28wPRfOiTztnBi-u2W0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946264290866-v22dddkarca49g61cf7v6b6ti9j6gre8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "946264290866-hmqq1dbeoimiaa77ccosqm8nrum70nd0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tes"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
