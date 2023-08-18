@@ -61,20 +61,8 @@ var loading=false;
 
                   Container(
                     alignment: Alignment.center,
-                    margin: EdgeInsets.only(left: 20, right: 20, top: 70),
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    height: 54,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Theme.of(context).colorScheme.primary,
-                      boxShadow: [
-                        BoxShadow(
-                            offset: Offset(0, 10),
-                            blurRadius: 20,
-                            color: primaryColor
-                        ),
-                      ],
-                    ),
+                    padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
                     child: TextFormField(
                       validator: _allvalidator,
                       controller: _nameController,
@@ -92,21 +80,9 @@ var loading=false;
                   ),
 
                   Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    height: 54,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Theme.of(context).colorScheme.primary,
-                      boxShadow: [
-                        BoxShadow(
-                            offset: Offset(0, 10),
-                            blurRadius: 20,
-                            color: primaryColor
-                        ),
-                      ],
-                    ),
+                     alignment: Alignment.center,
+                    padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
                     child: TextFormField(
                       validator: _emailValidator,
                       controller: _emailController,
@@ -123,21 +99,9 @@ var loading=false;
                     ),
                   ),
                   Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    height: 54,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Theme.of(context).colorScheme.primary,
-                      boxShadow: [
-                        BoxShadow(
-                            offset: Offset(0, 20),
-                            blurRadius: 20,
-                            color: primaryColor
-                        ),
-                      ],
-                    ),
+                     alignment: Alignment.center,
+                    padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
                     child: TextFormField(
                       validator: _allvalidator,
                       controller: _passwordController,
@@ -155,21 +119,9 @@ var loading=false;
                       ),
                     ),
                   ), Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    height: 54,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Theme.of(context).colorScheme.primary,
-                      boxShadow: [
-                        BoxShadow(
-                            offset: Offset(0, 20),
-                            blurRadius: 20,
-                            color: primaryColor
-                        ),
-                      ],
-                    ),
+                     alignment: Alignment.center,
+                    padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
                     child: TextFormField(
                       validator: _confirmPasswordValidator,
                       controller: _confirmPasswordController,
@@ -199,9 +151,9 @@ _signUp();
                       }
                     },
                     child: Container(
-                      alignment: Alignment.center,
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 70),
-                      padding: EdgeInsets.only(left: 20, right: 20),
+                       alignment: Alignment.center,
+                    padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
                       height: 54,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [(lightprimaryColor), new Color(0xffF2861E)],

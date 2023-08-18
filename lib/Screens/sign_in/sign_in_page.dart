@@ -1,5 +1,6 @@
 import 'package:femv2/Screens/sign_up/sign_up_page.dart';
 import 'package:femv2/constants.dart';
+import 'package:femv2/services/authservice.dart';
 import 'package:femv2/tasbih.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -36,6 +37,7 @@ class _SignInScreenState extends State<SignInScreen> {
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken
     );
+    
   }
 
 
@@ -47,6 +49,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
 
   Widget initWidget() {
+    final AuthService authService = AuthService();
     return Scaffold(
       body: Form(
         key:_formkey,
@@ -84,19 +87,8 @@ class _SignInScreenState extends State<SignInScreen> {
               ):Container(),
               Container(
                 alignment: Alignment.center,
-                margin: EdgeInsets.only(left: 20, right: 20, top: 70),
-                padding: EdgeInsets.only(left: 20, right: 20),
-                height: 54,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Theme.of(context).colorScheme.secondary,
-                  boxShadow:  [
-                    BoxShadow(
-                        offset: Offset(0, 10),
-                        blurRadius: 20,
-                        color: primaryColor,)
-                  ],
-                ),
+                    padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
                 child: TextFormField(
                   validator: _emailValidator,
                   controller: emailcontroller,
@@ -106,7 +98,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       Icons.email,
                       color: lightprimaryColor,
                     ),
-                    hintText: "Enter Email Here",
+                    hintText: "Enter Email here",
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
                   ),
@@ -114,19 +106,8 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               Container(
                 alignment: Alignment.center,
-                margin: EdgeInsets.only(left: 20, right: 20, top: 60),
-                padding: EdgeInsets.only(left: 20, right: 20),
-                height: 54,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Theme.of(context).colorScheme.secondary,
-                  boxShadow: const [
-                    BoxShadow(
-                        offset: Offset(0, 10),
-                        blurRadius: 20,
-                        color: primaryColor),
-                  ],
-                ),
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
                 child: TextFormField(
                   validator: _allvalidator,
                   controller: passwordcontroller,
@@ -137,7 +118,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       Icons.vpn_key_sharp,
                       color: lightprimaryColor,
                     ),
-                    hintText: "Enter Password Here",
+                    hintText: "Enter Password here",
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
                   ),
@@ -177,12 +158,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SignInButton.mini(buttonType: ButtonType.googleDark, onPressed: ()  async {
-                    await signInwithGoogle();
-                    if(mounted){
-                      Get.to((){return Tasbih();});
-
-                    }
-
+                   authService.handleSignIn();
 
 
                   }),
