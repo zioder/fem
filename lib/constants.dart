@@ -5,3 +5,4 @@ const lightgreenColor=Color.fromRGBO(133, 183, 157, 1);
 const superlightgreenColor=Color.fromRGBO(192, 229, 200, 1);
 const darkgreenColor=Color.fromRGBO(22, 48, 43, 1);
 var isPremium = false;
+var isOld= false;
