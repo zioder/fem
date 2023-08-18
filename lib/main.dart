@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> {
       title: 'لكل مسلم',
         theme: FlexThemeData.light(
           colorScheme: ColorScheme.light(
-            background: Colors.white,
+            background: Color.fromARGB(255, 255, 255, 255),
             primary: Colors.grey[300]!,
             secondary: Colors.grey[400]!,
 
@@ -98,6 +98,7 @@ class _MyAppState extends State<MyApp> {
 
 // If you do not have a themeMode switch, uncomment this line
 // to let the device system mode control the theme mode:
+// testr zfafa
  themeMode: ThemeMode.dark,
 
 
