@@ -14,14 +14,14 @@ class Tasbih extends StatefulWidget {
 }
 
 class _TasbihState extends State<Tasbih> {
-  int selectedIndex = 0;
+  int selectedIndex = 2;
   void changeTab() {
     if (mounted) setState(() {});
   }
   final Screens= [
     HomeScreen(),
     TabssehatScreen(),
-    Container(),
+PrayerScreen(),
     Container(child: Text('الزكاة'),),
     SettingsScreen()
 

@@ -1,70 +1,33 @@
-import 'package:femv2/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-
-
+class PrayerScreen extends StatefulWidget {
 
   @override
-  Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: primaryColor,
-        body: Column(
-          children: [
-            NextPrayerCard(width: width, height: height)
-
-          ],
-        ),
-
-      ),
-    );
-  }
-
-class NextPrayerCard extends StatelessWidget {
-  const NextPrayerCard({
-    Key? key,
-    required this.width,
-    required this.height,
-  }) : super(key: key);
-
-  final double width;
-  final double height;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: width ,
-      height: height/3,
-      decoration: BoxDecoration(
-        color: Colors.lightGreen,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-        )
-      ),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Text(DateTime.now().toString())
-            ],
-          )
-        ],
-      )
-      
-      ,
-    );
-  }
+  State<PrayerScreen> createState() => _PrayerScreenState();
 }
 
-class PrayerCard extends StatelessWidget {
-  const PrayerCard({Key? key}) : super(key: key);
-
+class _PrayerScreenState extends State<PrayerScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Theme.of(context).colorScheme.primary,height: 200,width: 200,);
+    return ListView(
+      children: [
+        Container(
+          height: 300,
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(30)
+            )
+          ),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Text('الظهر')
+            ],
+          ),
+        )
+
+      ],
+    );
   }
 }
 
