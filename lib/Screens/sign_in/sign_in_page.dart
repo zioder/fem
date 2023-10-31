@@ -190,9 +190,10 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 
   String? _allvalidator(String? text) {
-    if (text!.trim().isEmpty || text == null) {
+    if (text!.trim().isEmpty) {
       return 'This field is required';
     }
+    return null;
   }
 }
 
@@ -241,4 +242,5 @@ String? _emailValidator(String? email) {
   if (!GetUtils.isEmail(email!)) {
     return 'Enter A valid email';
   }
+  return null;
 }

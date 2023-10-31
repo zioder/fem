@@ -1,9 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:femv2/tasbih.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../../constants.dart';
@@ -215,11 +212,13 @@ _signUp();
     if(_passwordController.text!=confirmPassword){
       return "Passwords don't match ";
     }
+    return null;
   }
   String? _emailValidator(String? email){
     if(!GetUtils.isEmail(email!)){
       return 'Enter A valid email';
     }
+    return null;
   }
   String? _allvalidator(String? text){
     if(text!.trim().isEmpty){

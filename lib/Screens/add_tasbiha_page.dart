@@ -277,6 +277,7 @@ class _EmailInputFb2State extends State<EmailInputFb2> {
     else if (int.parse(text)>=100){
       return "You can't go over 100 this is a premium feature";
     }
+    return null;
   }
 }
 

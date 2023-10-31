@@ -21,7 +21,7 @@ class _PrayerScreenState extends State<PrayerScreen> {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              Text('الظهر')
+              Text('الظهر'),
             ],
           ),
         )

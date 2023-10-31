@@ -3,7 +3,6 @@ import 'package:femv2/firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'tasbih.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -108,7 +107,7 @@ class _MyAppState extends State<MyApp> {
             if (snapshot.hasData){
               return Tasbih();
             } else {
-              return Tasbih();
+              return Splashscreen();
             }
           }
       )
